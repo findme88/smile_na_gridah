@@ -254,27 +254,96 @@ body, html {
 }
 
 .smile__yellow8 {
-  -ms-grid-row: 9;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-area: 9/3/13/4;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-area: 10/4/12/13;
 }
 
 .smile__yellow9 {
-  -ms-grid-row: 9;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-area: 9/3/13/4;
+  -ms-grid-row: 8;
+  -ms-grid-column: 8;
+  grid-area: 8/8;
 }
 
 .smile__yellow10 {
   -ms-grid-row: 9;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 3;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: 9/7/9/10;
+}
+
+.smile__yellow11 {
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: 12/4/14/6;
+}
+
+.smile__yellow12 {
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-area: 12/11/14/13;
+}
+
+.smile__yellow13 {
+  -ms-grid-row: 12;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: 12/7/12/10;
+}
+
+.smile__yellow14 {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 6;
   -ms-grid-column-span: 1;
-  grid-area: 9/3/13/4;
+  grid-area: 13/6/15/7;
+}
+
+.smile__yellow15 {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-area: 13/10/15/11;
+}
+
+.smile__yellow16 {
+  -ms-grid-row: 14;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: 14/7/14/10;
+}
+
+.smile__white1 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: 7/5/7/7;
+}
+
+.smile__white2 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 12;
+  grid-area: 8/12;
+}
+
+.smile__white3 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 6;
+  grid-area: 8/6;
+}
+
+.smile__white4 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-area: 7/11/7/13;
 }
 
 .smile [class*="black"] {
@@ -283,5 +352,9 @@ body, html {
 
 .smile [class*="yellow"] {
   background: yellow;
+}
+
+.smile [class*="white"] {
+  background: white;
 }
 /*# sourceMappingURL=styles.css.map */

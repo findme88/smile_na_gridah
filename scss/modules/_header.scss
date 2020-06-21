@@ -85,16 +85,56 @@
   }
 
   &__yellow8 {
-    grid-area: 9/3/13/4
+    grid-area: 10/4/12/13
   }
 
   &__yellow9 {
-    grid-area: 9/3/13/4
+    grid-area: 8/8
   }
 
   &__yellow10 {
-    grid-area: 9/3/13/4
+    grid-area: 9/7/9/10
   }
+
+  &__yellow11 {
+    grid-area: 12/4/14/6
+  }
+
+  &__yellow12 {
+    grid-area: 12/11/14/13
+  }
+
+  &__yellow13 {
+    grid-area: 12/7/12/10
+  }
+
+  &__yellow14 {
+    grid-area: 13/6/15/7
+  }
+
+  &__yellow15 {
+    grid-area: 13/10/15/11
+  }
+
+  &__yellow16 {
+    grid-area: 14/7/14/10
+  }
+
+  &__white1 {
+      grid-area: 7/5/7/7;
+  }
+
+  &__white2 {
+    grid-area: 8/12;
+}
+
+&__white3 {
+    grid-area: 8/6;
+}
+
+&__white4 {
+    grid-area: 7/11/7/13;
+}
 }
 
 .smile [class*="black"] {
@@ -103,3 +143,7 @@
 .smile [class*="yellow"] {
   background: yellow;
 }
+
+.smile [class*="white"] {
+    background: white;
+  }
