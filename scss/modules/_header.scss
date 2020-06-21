@@ -1,0 +1,89 @@
+.smile {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+
+  &__black1 {
+    grid-area: 1/6/1/11;
+  }
+
+  &__black2 {
+    grid-area: 2/4/2/13;
+  }
+
+  &__black3 {
+    grid-area: 3/3/3/14;
+  }
+  &__black4 {
+    grid-area: 4/2/4/15;
+  }
+  &__black5 {
+    grid-area: 5/2/5/15;
+  }
+  &__black6 {
+    grid-area: 6/1/6/16;
+  }
+  &__black7 {
+    grid-area: 7/1/7/16;
+  }
+  &__black8 {
+    grid-area: 8/1/8/16;
+  }
+  &__black9 {
+    grid-area: 9/1/9/16;
+  }
+  &__black10 {
+    grid-area: 10/1/10/16;
+  }
+  &__black11 {
+    grid-area: 11/2/11/15;
+  }
+
+  &__black12 {
+    grid-area: 12/2/12/15;
+  }
+
+  &__black13 {
+    grid-area: 13/3/13/14;
+  }
+
+  &__black14 {
+    grid-area: 14/4/14/13;
+  }
+
+  &__black15 {
+    grid-area: 15/6/15/11;
+  }
+
+  &__yellow1 {
+    grid-area: 2/6/2/11
+  }
+
+  &__yellow2 {
+    grid-area: 3/4/3/13;
+  }
+
+  &__yellow3 {
+    grid-area: 4/3/6/14
+  }
+
+  &__yellow4 {
+    grid-area: 7/2/11/2
+  }
+
+  &__yellow {
+    grid-area: 15/6/15/11
+  }
+
+  &__yellow {
+    grid-area: 15/6/15/11
+  }
+}
+
+.smile [class*="black"] {
+  background: #000000;
+}
+.smile [class*="yellow"] {
+  background: yellow;
+}
