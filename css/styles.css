@@ -88,7 +88,7 @@ body, html {
 .smile {
   display: -ms-grid;
   display: grid;
-  height: 80vh;
+  height: 100vh;
   -ms-grid-columns: (1fr)[15];
       grid-template-columns: repeat(15, 1fr);
   -ms-grid-rows: (1fr)[15];
@@ -341,7 +341,7 @@ body, html {
   width: 400px;
   position: absolute;
   bottom: 1px;
-  left: 50%;
+  left: 25%;
   margin-left: -200px;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);

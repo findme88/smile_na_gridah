@@ -1,6 +1,6 @@
 .smile {
   display: grid;
-  height: 80vh;
+  height: 100vh;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(15, 1fr);
   z-index: 99;
@@ -151,7 +151,7 @@
     width: 400px;
     position: absolute;
     bottom: 1px;
-    left: 50%;
+    left: 25%;
     margin-left: -200px;
     transform: translateZ(0); /* offers a bit of a performance boost by pushing some of this processing to the GPU in Safari*/
   }
