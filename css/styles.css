@@ -88,7 +88,7 @@ body, html {
 .smile {
   display: -ms-grid;
   display: grid;
-  height: 100vh;
+  height: 80vh;
   -ms-grid-columns: (1fr)[15];
       grid-template-columns: repeat(15, 1fr);
   -ms-grid-rows: (1fr)[15];
@@ -333,107 +333,120 @@ body, html {
   background: white;
 }
 
-@-webkit-keyframes move_wave {
+.tuna {
+  -webkit-animation: walk-cycle 1s steps(12) infinite;
+          animation: walk-cycle 1s steps(12) infinite;
+  background: url(http://stash.rachelnabors.com/img/codepen/tuna_sprite.png) 0 0 no-repeat;
+  height: 200px;
+  width: 400px;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  margin-left: -200px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  /* offers a bit of a performance boost by pushing some of this processing to the GPU in Safari*/
+}
+
+@-webkit-keyframes walk-cycle {
   0% {
-    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
-            transform: translateX(0) translateZ(0) scaleY(1);
-  }
-  50% {
-    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
-            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    background-position: 0 0;
   }
   100% {
-    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
-            transform: translateX(-50%) translateZ(0) scaleY(1);
+    background-position: 0 -2391px;
   }
 }
 
-@keyframes move_wave {
+@keyframes walk-cycle {
   0% {
-    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
-            transform: translateX(0) translateZ(0) scaleY(1);
-  }
-  50% {
-    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
-            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    background-position: 0 0;
   }
   100% {
-    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
-            transform: translateX(-50%) translateZ(0) scaleY(1);
+    background-position: 0 -2391px;
   }
 }
 
-.waveWrapper {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-}
-
-.waveWrapperInner {
-  position: absolute;
+.foreground, .midground, .background {
   width: 100%;
-  overflow: hidden;
   height: 100%;
-  bottom: -1px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #86377b), color-stop(80%, #27273c));
-  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
-}
-
-.bgTop {
-  z-index: 15;
-  opacity: 0.5;
-}
-
-.bgMiddle {
-  z-index: 10;
-  opacity: 0.75;
-}
-
-.bgBottom {
-  z-index: 5;
-}
-
-.wave {
   position: absolute;
+  top: 0;
   left: 0;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat no-repeat;
-  background-position: 0 bottom;
-  -webkit-transform-origin: center bottom;
-          transform-origin: center bottom;
 }
 
-.waveTop {
-  background-size: 50% 100px;
+.foreground {
+  -webkit-animation: parallax_fg linear 10s infinite both;
+          animation: parallax_fg linear 10s infinite both;
+  background: url(http://stash.rachelnabors.com/24ways2012/foreground_grass.png) 0 100% repeat-x;
+  z-index: 3;
 }
 
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-  -webkit-animation: move-wave 3s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+@-webkit-keyframes parallax_fg {
+  0% {
+    background-position: -3584px 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
 }
 
-.waveMiddle {
-  background-size: 50% 120px;
+@keyframes parallax_fg {
+  0% {
+    background-position: -3584px 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
 }
 
-.waveAnimation .waveMiddle {
-  -webkit-animation: move_wave 10s linear infinite;
-          animation: move_wave 10s linear infinite;
+.midground {
+  -webkit-animation: parallax_mg linear 20s infinite;
+          animation: parallax_mg linear 20s infinite;
+  background: url("http://stash.rachelnabors.com/24ways2012/midground_grass.png") 0 100% repeat-x;
+  z-index: 2;
 }
 
-.waveBottom {
-  background-size: 50% 100px;
+@-webkit-keyframes parallax_mg {
+  0% {
+    background-position: -3000px 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
 }
 
-.waveAnimation .waveBottom {
-  -webkit-animation: move_wave 15s linear infinite;
-          animation: move_wave 15s linear infinite;
+@keyframes parallax_mg {
+  0% {
+    background-position: -3000px 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.background {
+  background-image: url("http://stash.rachelnabors.com/24ways2012/background_mountain5.png"), url("http://stash.rachelnabors.com/24ways2012/background_mountain4.png"), url("http://stash.rachelnabors.com/24ways2012/background_mountain3.png"), url("http://stash.rachelnabors.com/24ways2012/background_mountain2.png"), url("http://stash.rachelnabors.com/24ways2012/background_mountain1.png");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  z-index: 1;
+  -webkit-animation: parallax_bg linear 40s infinite;
+          animation: parallax_bg linear 40s infinite;
+}
+
+@-webkit-keyframes parallax_bg {
+  100% {
+    background-position-x: 2400px, 2000px, 1800px, 1600px, 1200px;
+  }
+}
+
+@keyframes parallax_bg {
+  100% {
+    background-position-x: 2400px, 2000px, 1800px, 1600px, 1200px;
+  }
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0))), #d2d2d2 url("http://stash.rachelnabors.com/24ways2012/background_clouds.png");
+  background: linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%), #d2d2d2 url("http://stash.rachelnabors.com/24ways2012/background_clouds.png");
 }
 /*# sourceMappingURL=styles.css.map */
